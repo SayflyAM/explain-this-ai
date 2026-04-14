@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExplainThis - UI Mockup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <h1>ExplainThis</h1>
+        <p class="subtitle">Simple text simplification training interface</p>
+
+        <!-- Simple form area for user input -->
+        <div class="form-box">
+            <label for="complexText">Enter Complex Text:</label>
+            <textarea id="complexText" rows="8" placeholder="Paste Arabic or English complex text here..."></textarea>
+
+            <p class="section-title">Select Language:</p>
+            <label><input type="radio" name="language" value="english" checked> English</label>
+            <label><input type="radio" name="language" value="arabic"> Arabic</label>
+
+            <br><br>
+            <button type="button" id="simplifyBtn">Simplify Text</button>
+        </div>
+
+        <!-- Result area that shows the dummy simplified text -->
+        <div class="result-box">
+            <h2>Simplified Explanation</h2>
+            <p id="resultText">Your simplified explanation will appear here after you click the button.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("simplifyBtn").onclick = function () {
+            document.getElementById("resultText").textContent = "This is a dummy simplified explanation. In the real system, this area will show API/NLP output.";
+        };
+    </script>
+</body>
+
+</html>
